@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- ch1 sec 7/8-->
+<title>Page Title</title>
+
+<script>
+    //ONCLICK AND ONMOUSEOVER are exmples of EVENTHANDLERS... theres many more!!
+
+    alert("Display ALERT message"); //alert/promt are the functions
+    prompt(" pleasevtype your name", "PROMPT..."); //the inside is the argument sent to the function
+
+    function callIt() {
+        alert("you clicked!!");
+    }
+
+    function Mouse(){
+        alert("this is another event handler!!");
+    }
+</script>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<button id="butt" type="button" onclick="callIt()"> Try it</button>
+
+<p onmouseover="Mouse()">This is a paragraph.</p>
+
+</body>
+<!--
+    1) Creating functions allows you to create packages of code that can be used over and over again.
+    2)function without argument EX: alert();
+    3)functions purpose is to chunk up code in more organized manner
+    4)function inside functions are okay
+-->
+</html>

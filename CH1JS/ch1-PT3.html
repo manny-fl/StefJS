@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--ch1 pt 9/10-->
+<title>Page Title</title>
+
+<script>
+    function myFunction(message){
+        alert("you clicked on a" + message);
+    }
+
+    function loadFunc(){
+        alert("page has loaded" + new Date());
+    }
+</script>
+
+</head>
+<body onload="loadFunc()">
+<h1>This is a Heading</h1>
+
+<p onclick = "myFunction('PARAGRAPH')">This is a PARAGRAPH</p>
+
+<button id="butt" type="button" onclick="myFunction('paragraph')"> Try it</button>
+
+
+</body >
+<!--
+    1)set functions to accept arguments 
+    2)onload is another event handler
+    3)EVENT HANDLERS check to see when some event(ex: a click, a mouseover, page loading) happens in a web page.
+    4)DOM = DOCUMENT OBJECT MODULE.
+-->
+</html>

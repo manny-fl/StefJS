@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CH1-Lesson5-JS</title>
+<!-- ch1 lesson 4-6-->
+<!--
+    JS != JAVA
+-->
+<style type="type/css">
+
+</style>
+
+<!--<
+    script src="external.js"></script> 
+-->
+
+<script>
+   function callIt(){  //pops up with btn click (I commented out the lert below otherwise this wont show due to #1)
+       alert("this works"); alert("this works too!!!");
+   }
+    alert("check out this inline code"); alert("check out this one too"); //automatic
+
+</script>
+
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<button id="butt" type="button" onclick="callIt()"> Try it</button>
+
+<p>This is a paragraph.</p>
+
+<!--
+<script> //connected to button when you click 'TRY IT'
+    
+    document.getElementById("butt").onclick=function(){alert(
+        'annonymous inner function alert'
+    );}
+    
+</script>
+-->
+
+</body>
+<!--
+    #1) code runs top down
+    #2) js can be in body/over body/ or even external link connecting to html
+    #3) ALERT is considered a Function
+-->
+</html>
