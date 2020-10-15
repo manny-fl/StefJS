@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html onkeypress="sniffer('u pressed a key')">
+<head>
+    <meta charset="UTF-8">
+<title>EVENT HNANDLERS </title>
+
+<!--
+    Ctrl + Command + G seelcts all occurances of a word simutaneously to change if needed!!!
+
+    Common EVENT HANDLERS
+    1}onclick       4}onload    7)ONRESIZE
+    2}onmouseover   5}onkeypress
+    3}onmouseout    6}onchange
+-->
+
+<script>
+    function sniffer(message) {
+        console.log("somehing just happened:" + message);
+    }
+</script>
+
+<style type="text/css">
+        #secondP {width:200px; background-color:aqua}
+
+        p:hover, button:hover{cursor:pointer;}
+</style>
+
+</head>
+<body onresize="sniffer('window resized')" onload="alert('page is laoding')" >
+
+<h1>This is a Heading</h1>
+
+<input type="text" onchange="alert('somethng changed')">
+
+<button id="butt" type="button"> try it</button>
+
+<p id="firstP"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,
+     incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis,
+     nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+      eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+<p  id="secondP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor,
+    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis,
+    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+     sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+     <script> //shows inside console.log
+         document.getElementById("butt").onclick = function(){
+             sniffer(" anonnymous inner sniffer function");
+         }
+         document.getElementById("firstP").onclick=function(){
+             alert("onclick 1st inner p");
+             console.log("inner 1st P anonnymouse inner F");
+         }
+         document.getElementById("secondP").onmouseover=function(){
+             alert("mouse over inner 2nd P");
+            console.log("inner 2st P anonnymouse inner F");
+         }
+     </script>
+</body>
+<!--
+    1)Ctrl + Command + G 
+    2)console.log is very very helpfull to measure if code runns right or if theres mistakes
+    3)adding more than one event handler in one spot isnt really good practice but it can be done.
+    4)inline event hanlers = messyish code
+-->
+<!--
+    1)change in text editor colors is first sign of an error 
+    2)uncaugh syntax error in console.log is 2nd sign... unexpec token illegal means incorrect text probably.
+    3)null means non exsistant.. remember code runs top to bottomm...
+-->
+</html>
