@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html onkeypress="sniffer('!Key Pressed!!!')">
+<head>
+    <meta charset="UTF-8">
+<title>JS LOOPS</title>
+
+<script>
+
+   function doItAgain(message) {
+       for (var i = 5; i >= 0; i--) {
+           var target = document.getElementById("target");
+           target.innerHTML = target.innerHTML + "loopCount:" + i + "<br>" ;
+           console.log("loopcount is now:" + i);
+       }
+
+       console.log("LOOP END");
+       var button = document.getElementById("looper");
+       button.value = "Done looping";
+   }
+</script>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<input type="button" id="looper" value="do it again">
+
+<p id="target"></p>
+
+<script>
+    document.getElementById("looper").onclick=function() {
+        doItAgain();
+        this.style.color = "red";
+    }
+</script>
+
+</body>
+</html>

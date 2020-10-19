@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+<title>CH8 js objects and arrays</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<input type="button" id="looper" value="do it Again!">
+
+<p id="target"></p>
+
+    <script>
+        document.getElementById("looper").onclick=function() {
+            var fruit = [
+                        "apple",
+                        "berrys",
+                        "carrots"
+                        ];
+                    fruit.push("banannas");
+                    alert(fruit.sort()); //organizes
+                for (index = 0; index < fruit.length; index++) {
+                    alert(fruit[index]);
+                }
+        }
+    </script>
+</body>
+</html>

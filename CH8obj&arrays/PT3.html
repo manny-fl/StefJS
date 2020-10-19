@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"> 
+<title>CH8 js objects and arrays</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+
+<input type="button" id="looper" value="do it Again!">
+
+<p id="target"></p>
+
+    <script>
+        document.getElementById("looper").onclick=function() {
+            var fruit = [
+                        "apple",
+                        "carrots",
+                        "berrys",
+                        ];
+
+                        alert(fruit.sort()); //organizes
+
+            //var fruit2 = ["dates","eggPlant",fruit, true]; 
+            //array inside array. can put boolians also.
+
+            document.getElementById("target").innerHTML = fruit[2];
+
+
+            alert(fruit.length); // array length
+        }
+    </script>
+</body>
+</html>
