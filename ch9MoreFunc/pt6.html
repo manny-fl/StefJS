@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Page Title</title>
+
+<style type="text/css">
+    div {position:relative}
+    h1 {margin:25px auto; width:100%; background-color: blueviolet; text-align:center;
+    font-size:24px; font-family: sans-serif; color: #fff}
+</style>
+
+</head>
+<body>
+
+<div>
+    <h1>This is a Heading</h1>
+        <input type="button" id="button" value="NAME DISPLAY">
+</div>
+
+<script>
+    //global scope vs local scope
+    //must acces local scope through the function
+   var globalVar = "global";
+
+   function variableScope() {
+       var localVar = 500;
+       return localVar;
+   }
+   alert(variableScope());
+
+   document.getElementById("button").onclick=function(){
+       console.log(singleReturn("manny", "flores"));
+   }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Page Title</title>
+
+<style type="text/css">
+    div {position:relative}
+    h1 {margin:25px auto; width:100%; background-color: blueviolet; text-align:center;
+    font-size:24px; font-family: sans-serif; color: #fff}
+    #rightButton {float:right;}
+    #leftButton, #rightButton{width:100px}
+</style>
+
+</head>
+<body>
+
+<div>
+    <h1>This is a Heading</h1>
+        <input type="button" id="leftButton" value="DO IT!">
+        <input type="button" id="rightButton" value="DO IT AGAIN!">
+    <p id="target"></p>
+</div>
+
+<script>
+    function aFunction(aButton){
+    var Button = document.getElementById(aButton); //now works 4 both buttons
+    Button.value = "clicked!!!";
+    }
+
+    document.getElementById("rightButton").onclick=function(){ 
+        aFunction(this.id);
+    }
+    document.getElementById("leftButton").onclick=function(){ 
+        aFunction(this.id);
+    }
+</script>
+</body>
+</html>
