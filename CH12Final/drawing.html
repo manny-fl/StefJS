@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Page Title</title>
+<style>
+    main {width:50%; margin: 0 auto; }
+    canvas{border:1px dashed black; padding: 10px; margin: 0 auto; display:block}
+</style>
+</head>
+
+<body>
+
+<main>
+    <h2>drawing on screen with js</h2>
+    <canvas id="whiteBoard" width="400" height="400"></canvas>
+</main>
+
+<script type="text/javascript">
+document.getElementById("whiteBoard").onclick = function() {
+    var canvas = document.getElementById("whiteBoard");
+    var context = canvas.getContext("2d");
+
+    context.lineWidth = 30;
+    context.strokeStyle = "rgb(205,40,40)";
+
+    context.moveTo(25,50);
+    context.lineTo(400,50);
+    context.LineCap = "butt";
+    context.stroke();
+
+    context.lineWidth = 25;
+    context.strokeStyle = "#95CA91";
+
+    context.beginPath();//2nd line
+    context.moveTo(25,120);
+    context.lineTo(400,120);
+    context.LineCap = "butt";
+    context.stroke();
+
+}
+</script>
+</body>
+</html>

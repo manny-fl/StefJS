@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <div id="theDiv">
+        <h1>The DOM</h1>
+        <input type="button" id="button" value="activate!">
+        <p id="target"></p>
+    </div>
+
+    <script>
+        function addNewContent(){
+            var para = document.createElement("p");
+
+            var node = document.createTextNode("the new text");
+            para.appendChild(node);
+
+            var targetDiv = document.getElementById("theDiv");
+            targetDiv.appendChild(para);
+            console.log(targetDiv.innerHTML);
+        }
+
+        function domWork(){
+            var targetDiv = document.getElementById("theDiv");
+            targetDiv.style.backgroundColor = "BBBBF1";
+            console.log(targetDiv.innerHTML);
+        }
+
+        document.getElementById("button").onclick=function(){
+            addNewContent();
+        }
+    </script>
+
+
+</body>
+</html>

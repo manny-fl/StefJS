@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+    <div id="theDiv">
+        <h1>inner html</h1>
+        <input type="button" id="button" value="activate!">
+        <p id="target"></p>
+    </div>
+
+    <script>
+        var theText = "blah blah blah<h1> THE MAIN BLAH</h1>";
+        var targetDiv = document.getElementById("theDiv");
+            targetDiv.innerHTML = theText + targetDiv.innerHTML;
+            console.log(targetDiv.innerHTML);
+    </script>
+
+
+</body>
+</html>
